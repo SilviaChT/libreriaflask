@@ -13,7 +13,7 @@ from models.autorlibro import AutorLibroModel
 app = Flask(__name__)
 # dialect+driver://username:password@host:port/database
 # es compatible con MySQL, Oracle, PostgreSQL, SQLite
-app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:root@localhost/libreria'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql://k4ppqvkq3dodaymz:s9gruop4bog2cotw@b4e9xxkxnpu2v96i.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/mjn99rhskscqdf85'
 api = Api(app=app)
 @app.before_first_request
 def iniciador():
@@ -37,3 +37,4 @@ api.add_resource(EncontrarLibroController,'/libro/<string:palabra>')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
